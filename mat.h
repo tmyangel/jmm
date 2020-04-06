@@ -8,7 +8,7 @@ extern "C" {
 
 #include "vec.h"
 
-typedef struct {
+typedef struct ALIGN(16) {
   union {
     dbl data[2][2];
     dvec2 rows[2];
@@ -29,7 +29,7 @@ dbl dmat22_det(dmat22 const *A);
 void dmat22_eigvals(dmat22 const *A, dbl *lam1, dbl *lam2);
 void dmat22_transpose(dmat22 *A);
 
-typedef struct {
+typedef struct ALIGN(16) {
   union {
     dbl data[4][4];
     dvec4 rows[4];

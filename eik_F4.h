@@ -21,7 +21,7 @@ extern "C" {
 // the benefit: everything below becomes "pure", and there's no
 // mutating state
 
-typedef struct {
+typedef struct ALIGN(16) {
   // Inputs:
   cubic_s T_cubic, Tx_cubic, Ty_cubic;
   dvec2 xy, xy0, xy1;

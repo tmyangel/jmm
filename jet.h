@@ -6,7 +6,7 @@ extern "C" {
 
 #include "def.h"
 
-typedef struct jet {
+typedef struct ALIGN(16) jet {
   dbl f, fx, fy, fxy;
 } jet_s;
 

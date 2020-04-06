@@ -4,7 +4,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-typedef struct heap {
+typedef struct ALIGN(16) heap {
   int capacity;
   int size;
   int* inds;

@@ -6,7 +6,7 @@ extern "C" {
 
 #include "field.h"
 
-typedef struct {
+typedef struct ALIGN(16) {
   field2_s const *slow;
   dbl s, s0;
   dvec2 lp;

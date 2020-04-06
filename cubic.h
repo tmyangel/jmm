@@ -6,7 +6,7 @@ extern "C" {
 
 #include "vec.h"
 
-typedef struct cubic {
+typedef struct ALIGN(16) cubic {
   dvec4 a;
 } cubic_s;
 

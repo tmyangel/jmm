@@ -28,7 +28,7 @@
  * - l vs lc index spaces
  * - cell verts are in column major order
  */
-struct eik {
+struct ALIGN(16) eik {
   field2_s const *slow;
   ivec2 shape;
   dvec2 xymin;

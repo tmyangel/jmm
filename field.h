@@ -6,7 +6,7 @@ extern "C" {
 
 #include "vec.h"
 
-typedef struct field2 {
+typedef struct ALIGN(16) field2 {
   dbl(*f)(dbl, dbl, void*);
   dvec2(*grad_f)(dbl, dbl, void*);
   void *context;

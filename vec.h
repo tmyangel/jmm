@@ -9,7 +9,7 @@ extern "C" {
 
 #include <math.h>
 
-typedef struct {
+typedef struct ALIGN(16) {
   dbl x;
   dbl y;
 } dvec2;
@@ -32,7 +32,7 @@ void dvec2_normalize(dvec2 *v);
 dvec2 dvec2_cproj(dvec2 u, dvec2 v);
 dvec2 dvec2_avg(dvec2 u, dvec2 v);
 
-typedef struct {
+typedef struct ALIGN(16) {
   union {
     dbl data[4];
     struct {
@@ -55,7 +55,7 @@ dvec4 dvec4_e1();
 dvec4 dvec4_one();
 dvec4 dvec4_iota();
 
-typedef struct {
+typedef struct ALIGN(16) {
   int i;
   int j;
 } ivec2;

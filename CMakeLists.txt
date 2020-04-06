@@ -2,6 +2,12 @@ cmake_minimum_required (VERSION 3.15.3)
 
 project (_sjs)
 
+set (CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+set (CMAKE_REQUIRED_INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}")
+include (OptimizeForArchitecture)
+
+OptimizeForArchitecture ()
+
 set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC -Wall -Wextra -Werror")
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -Wextra -Werror")
 

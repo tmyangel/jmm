@@ -8,6 +8,8 @@ extern "C" {
 #define SJS_DEBUG 1
 #endif
 
+#define ALIGN(x) __attribute__((aligned(x)))
+
 #define ROW_MAJOR_ORDERING 0
 #define COLUMN_MAJOR_ORDERING 1
 #define ORDERING ROW_MAJOR_ORDERING
@@ -19,7 +21,7 @@ extern "C" {
 #define SQRT2 1.414213562373095
 #define UNFACTORED -1
 
-typedef enum state {FAR, TRIAL, VALID, BOUNDARY} state_e;
+typedef enum ALIGN(16) state {FAR, TRIAL, VALID, BOUNDARY} state_e;
 
 /**
  * Change this to float to use single precision instead.
